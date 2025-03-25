@@ -1,0 +1,110 @@
+:root {
+    --primary-color: #4361ee;
+    --primary-light: #4895ef;
+    --primary-dark: #3a0ca3;
+    --secondary-color: #f72585;
+    --background-color: #f8f9fa;
+    --text-color: #212529;
+    --text-muted: #6c757d;
+    --border-color: #dee2e6;
+    --success-color: #4caf50;
+    --warning-color: #ff9800;
+    --card-bg: #ffffff;
+    --font-family: 'Inter', sans-serif;
+    --border-radius: 8px;
+    --box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    --transition: all 0.3s ease;
+  }
+
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    font-family: var(--font-family);
+    background-color: var(--background-color);
+    color: var(--text-color);
+    line-height: 1.6;
+  }
+
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px 0;
+  }
+
+  header h1{
+    color: var(--primary-color);
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+  }
+
+  header p {
+    color: var(--text-muted);
+    font-size: 1.1rem;
+  }
+
+  main {
+    display: grind;
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  @media (min-width: 768px) {
+    main {
+        grid-template-columns: 1fr 1fr;
+    }
+  }
+
+  .form-container,.tasks-container {
+    background-color: var(--card-bg);
+    border-radius: var(--border-radius);
+    padding: 25px;
+    box-shadow: var(--box-shadow);
+  }
+
+  h2{
+    color: var(--primary-dark);
+    margin-bottom: 20px;
+    font-size: 1.5rem;
+  }
+
+  .form-group {
+    margin-bottom: 20px;
+  }
+
+  .for-row {
+    display: grind;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+  }
+
+  label {
+    display: block;
+    margin-bottom: 8px;
+    color: var(--text-color);
+    font-weight: 500;
+  }
+
+  input, textarea, select {
+        width: 100%;
+        padding: 12px;
+        border: 1px solid var(--border-color);
+        border-radius: var(--border-radius);
+        font-family: var(--font-family);
+        font-size: 1rem;
+        transition: var(--transition);
+  }
+
+  input:focus,textarea:focus, select:focus {
+    outline: none;
+    border-color: var(--primary-light);
+    box-shadow: 0 0 0 3px rgba(67, 97, 238, 0.15);
+
+  }
+
+  textarea{
+    
+  }

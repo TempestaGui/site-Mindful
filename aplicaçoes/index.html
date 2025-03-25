@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="Pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agenda Mindful</title>
+    <link rel = "stylesheet" href="estilos.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap">
+</head>
+<body>
+    <div class = "container">
+        <header>
+            <h1>Agenda Mindful</h1>
+            <p>Organize suas atividades com tranquilidades</p>
+        </header>
+        <main>
+            <section class = "form-container" >
+                <h2>Adcionar novas atividades</h2>
+                <form id="task-form">
+                    <div class="form-group">
+                        <label for="task-title">Título</label>
+                        <input type="text" id="task-title" placeholder="Nome da atividade" required>
+                      </div>
+                      
+                      <div class="form-group">
+                        <label for="task-description">Descrição</label>
+                        <textarea id="task-description" placeholder="Detalhes da atividade"></textarea>
+                      </div>
+                      
+                      <div class="form-row">
+                        <div class="form-group">
+                          <label for="task-date">Data</label>
+                          <input type="date" id="task-date" required>
+                        </div>
+                        
+                        <div class="form-group">
+                          <label for="task-time">Horário</label>
+                          <input type="time" id="task-time" required>
+                        </div>
+                      </div>
+                      
+                      <button type="submit" class="btn btn-primary">Adicionar Atividade</button>
+                </form>
+            </section>
+            <section class="tasks-container">
+                <div class = "tasks-header">
+                    <h2>Suas atividades</h2>
+                    <div class="filter-container">
+                        <select id="filter-tasks">
+                            <option value="all">Todas</option>
+                            <option value="pending">Pendentes</option>
+                            <option value="completed">Concluidas</option>
+                        </select>
+                    </div>
+                </div>
+                <div id="tasks-list" class="tasks-list">
+                    <!--tarefas vao ser adcionadas aqui via js-->
+                    <div class="empty-state">
+                        <p>Voce nao tem atividades agendadas.</p>
+                        <p>adcione uma nova atividade usando o formulario acima.</p> 
+                    </div>
+                </div>
+            </section>
+        </main>
+        <footer>
+            <p>&copy; 2025 Agenda Mindful - organize seu dia a dia com tranquilidades</p>
+        </footer>
+    </div>
+
+    <div id="toast" class="toast hidden">
+        <span id="toast-message"></span>
+    </div>
+<script src="app.js"></script>
+</body>
+</html>
