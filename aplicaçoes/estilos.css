@@ -1,7 +1,8 @@
 :root {
-    --primary-color: #4361ee;
-    --primary-light: #4895ef;
-    --primary-dark: #3a0ca3;
+  /*nessa parte vamos definir as variaveis css para as cores,fontes e estilos*/
+    --primary-color: #4361ee;/*cor primaria do tema*/
+    --primary-light: #4895ef;/*uma versao mais cara da cor primaria do tema*/
+    --primary-dark: #3a0ca3; /*versao mais escura da cor primaria*/
     --secondary-color: #f72585;
     --background-color: #f8f9fa;
     --text-color: #212529;
@@ -10,56 +11,56 @@
     --success-color: #4caf50;
     --warning-color: #ff9800;
     --card-bg: #ffffff;
-    --font-family: 'Inter', sans-serif;
-    --border-radius: 8px;
-    --box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    --transition: all 0.3s ease;
+    --font-family: 'Inter', sans-serif; /*definir a fonte principal*/
+    --border-radius: 8px; /*raio da borda para botoes e cartoes*/
+    --box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /*sombra padrao*/
+    --transition: all 0.3s ease; /*transiçao suave para as animaçoes*/
   }
 
-  * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  * {/*aplica as regras a todos os elementos*/
+    margin: 0; /*remove a margem externa de todos elementos*/
+    padding: 0;/*remove espaçamento interno*/
+    box-sizing: border-box;/*garante que largura e altura incluam boradas e padding*/
   }
 
   body {
-    font-family: var(--font-family);
-    background-color: var(--background-color);
-    color: var(--text-color);
-    line-height: 1.6;
+    font-family: var(--font-family); /*aplica a fonte padrao*/
+    background-color: var(--background-color); /*define o fundo da pagina*/
+    color: var(--text-color);/*cor padrao do texto*/
+    line-height: 1.6;/*espaçamento entre linhas e textos*/
   }
 
   .container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px;
+    max-width: 1200px;/*define a largura maxima*/
+    margin: 0 auto;/*centraliza a div horizontalmente*/
+    padding: 20px;/*adciona espaço interno*/
   }
   header{
-    margin-bottom: 30px;
+    margin-bottom: 30px; /*adciona espaço abaixo do header*/
   }
 
   header h1{
-    color: var(--primary-color);
-    font-size: 2.5rem;
-    margin-bottom: 10px;
-    text-align: center;
+    color: var(--primary-color); /*cor do titulo*/
+    font-size: 2.5rem; /*tamanho grande da fonte */
+    margin-bottom: 10px;/*espaço abaixo do titulo*/
+    text-align: center;/*centraliza o texto*/
   }
 
   header p {
-    color: var(--text-muted);
-    font-size: 1.1rem;
-    text-align: center;
+    color: var(--text-muted); /*cor secundaria do texto*/
+    font-size: 1.1rem; /*tamanho do paragrafo*/
+    text-align: center;/*centraliza o paragrafo*/
   }
-
+/*RESPONSIBILIDAE PARA CELULARES*/
   main {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 30px;
+    display: grid; /*transorma a main em um grid layout*/
+    grid-template-columns: 1fr;/*define uma unica coluna que ocupa todo espaço*/
+    gap: 30px; /*adciona espaços entre os elementos*/
   }
-
-  @media (min-width: 768px) {
+/*RESPONSIVIDADE PARA COMPUTADORES*/
+  @media (min-width: 768px) { /*aplica a regra quando a largura da tela for maior que 768px*/
     main {
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr; /*cria duas colunas ao inves de uma*/
     }
   }
 
@@ -92,15 +93,15 @@
     color: var(--text-color);
     font-weight: 500;
   }
-
+/*ESTILIZANDO FORMULARIOS E BOTOES*/
   input, textarea, select {
-        width: 100%;
-        padding: 12px;
-        border: 1px solid var(--border-color);
-        border-radius: var(--border-radius);
-        font-family: var(--font-family);
-        font-size: 1rem;
-        transition: var(--transition);
+        width: 100%; /*oculpa toda largura disponicel*/
+        padding: 12px;/*espaçamento interno*/
+        border: 1px solid var(--border-color);/*cria uma borda fina*/
+        border-radius: var(--border-radius);/*bordas arredondadas*/
+        font-family: var(--font-family);/*fonte do texto*/
+        font-size: 1rem;/*tamanho do texto*/
+        transition: var(--transition);/*suaviza as mudanças de estado*/
   }
 
   input:focus,textarea:focus, select:focus {
@@ -114,26 +115,27 @@
     min-height: 100px;
     resize: vertical;
   }
-
+/*BOTOES*/
   .btn {
-    display: inline block;
-    padding: 15px 200px;
-    background-color: var(--primary-color);
-    color: white;
-    border: none;
-    border-radius: var(--border-radius);
-    cursor: pointer;
+    display: inline block; /*permite definir largura e altura*/
+    padding: 15px 200px;/*aumenta o espaço interno*/
+    background-color: var(--primary-color);/*cor de fundo*/
+    color: white;/*cor do texto*/
+    border: none;/*remove boradas*/
+    border-radius: var(--border-radius); /*bordas arredondadas*/
+    cursor: pointer;/*muda o cursor ao passar por cima*/
     font-family: 1rem;
     font-weight: 500;
     text-align: center;
-    transition:  var(--transition);
+    transition:  var(--transition);/*suaviza mudanças*/
   }
-
+/*muda o estado do botao ao passar por cima*/
   .btn:hover{
     background-color: var(--primary-dark);
     transform: translateY(-4px);
+    box-shadow: 0 4px 8px rgba(5, 0, 0, 0.342);
   }
-
+/*definiçao das cores dos botoes conforme suas classes*/
   .btn-primary{
     background-color: var(--primary-color);
   }
@@ -149,24 +151,24 @@
   .btn-danger {
     background-color: var(--secondary-color);
   }
-
+/*cabeçalho da lista de tarefas, usa flexbox para organizar os elementos*/
   .tasks-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin-bottom: 20px;
   }
-
+/*define o tamanho minimo do container do filto*/
   .filter-container {
     min-width: 150px;
   }
-
+/*lista de tarefas organizadas em colunas, com espaçamento entre os itens*/
   .tasks-list {
     display: flex;
     flex-direction: column;
     gap: 15px;
   }
-
+/*estilizaçao do item de tarefas */
   .task-item {
     background-color: white;
     border-radius: var(--border-radius);
@@ -176,47 +178,47 @@
     transition: var(--transition);
     position: relative;
   }
-
+/*efeito hover nos itens de tarefa: levantar e adcionar sombra*/
   .task-item:hover{
     transform: translateY(-3px);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   }
-
+/*estilizaçao da tarefa concluida: muda a cor da bora e reduz opacidade*/
   .task-item.completed {
     border-left-color: var(--success-color);
     opacity: 0.8;
   }
-
+/*tarefa concluida: risca o texto e muda a cor*/
   .task-item.completed .task-tile{
     text-decoration: line-through;
     color: var(--text-muted);
   }
-
+/*estilizaçao do titulo da tarefa*/
   .task-title {
     font-weight: 600;
     margin-bottom: 5px;
     font-size: 1.1rem;
   }
-
+/*estilizaçao da descriçao da tarefa*/
   .task-description {
     color: var(--text-muted);
     margin-bottom: 10px;
     font-size: 0.95rem;
   }
-
+/*organizaçao dos metadados da tarefa*/
   .task-meta {
     display: flex;
     justify-content: space-between;
     font-size: 0.9rem;
     color: var(--text-muted);
   }
-
+/*container dos botoes de açao da tarefa*/
   .task-actions {
     display: flex;
     gap: 10px;
     margin-top: 15px;
   }
-
+/*estilizaçao dos botoes de açao*/
   .task-actions-btn {
     background-color: transparent;
     border: 1px solid var(--border-color);
@@ -226,11 +228,11 @@
     cursor:  pointer;
     transition: var(--transition);
   }
-
+/*efeito hover nos botoes de açao*/
   .task-actions-bnt:hover{
     background-color: var(--background-color);
   }
-
+/*estilizaçao dos botoes*/
   .task-actions-bnt.complete{
     color: var(--success-color);
     border-color: var(--success-color);
@@ -240,12 +242,12 @@
     color: var(--secondary-color);
     border-color: var(--secondary-color);
   }
-
+/*estilizaçao do estado vazio da lista de tarefas*/
   .empty-state p:first-child{
     font-size: 1.1rem;
     margin-bottom: 10px;
   }
-
+/*estilizaçao do rodape*/
   footer{
     text-align: center;
     margin-top: 50px;
@@ -253,7 +255,7 @@
     color: var(--text-muted);
     font-size: 0.9rem;
   }
-
+/*estilizaçao do alerta*/
   .toast{
     position: fixed;
     bottom: 20px;
@@ -267,23 +269,25 @@
     transition: var(--transition);
     transform: translateY(0);
   }
-
+/*esconde o alerta quando ele esta oculto*/
   .toast.hidden {
     transform: translateY(100px);
     opacity: 0;
     visibility: hidden;
   }
-
+/*responsividade para telas menores de 767px*/
   @media (max-width: 767px){
+    /*organiza o formulario em uma unica coluna*/
     .form-row{
       grid-template-columns: 1fr;
     }
-
+/*alinha o cabeçalho da lista de tarefas para colunas*/
     .tasks-header{
       flex-direction: column;
       align-items: flex-start;
       gap: 10px;
     }
+    /*o filtro oculpa toda a largura disponicel*/
     .filter-container{
       width: 100%;
     }
