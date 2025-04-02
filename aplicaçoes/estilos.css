@@ -81,11 +81,13 @@
     margin-bottom: 20px;
   }
 
-  .for-row {
+  
+      .for-row {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 15px;
   }
+  
 
   label {
     display: block;
@@ -118,7 +120,8 @@
 /*BOTOES*/
   .btn {
     display: inline block; /*permite definir largura e altura*/
-    padding: 15px 200px;/*aumenta o espaço interno*/
+    padding: 15px 20px;/*aumenta o espaço interno*/
+    width: 100%; 
     background-color: var(--primary-color);/*cor de fundo*/
     color: white;/*cor do texto*/
     border: none;/*remove boradas*/
@@ -213,35 +216,38 @@
     color: var(--text-muted);
   }
 /*container dos botoes de açao da tarefa*/
-  .task-actions {
+  .task-action {
     display: flex;
     gap: 10px;
     margin-top: 15px;
   }
 /*estilizaçao dos botoes de açao*/
-  .task-actions-btn {
-    background-color: transparent;
-    border: 1px solid var(--border-color);
-    border-radius: var(--border-radius);
-    padding: 5px 10px;
-    font-size: 0.85rem;
-    cursor:  pointer;
-    transition: var(--transition);
-  }
-/*efeito hover nos botoes de açao*/
-  .task-actions-bnt:hover{
-    background-color: var(--background-color);
-  }
-/*estilizaçao dos botoes*/
-  .task-actions-bnt.complete{
-    color: var(--success-color);
-    border-color: var(--success-color);
-  }
+.task-action-btn {
+  background-color: transparent;
+  border: 1px solid var(--border-color);
+  border-radius: var(--border-radius);
+  padding: 5px 10px;
+  font-size: 0.85rem;
+  cursor: pointer;
+  transition: var(--transition);
+}
 
-  .task-actions-bnt.delete{
-    color: var(--secondary-color);
-    border-color: var(--secondary-color);
-  }
+/* Efeito hover */
+.task-action-btn:hover {
+  background-color: var(--background-color);
+}
+
+/* Estilização dos botões específicos */
+.task-action-btn.complete {
+  color: var(--success-color);
+  border-color: var(--success-color);
+}
+
+.task-action-btn.delete {
+  color: var(--secondary-color);
+  border-color: var(--secondary-color);
+}
+
 /*estilizaçao do estado vazio da lista de tarefas*/
   .empty-state p:first-child{
     font-size: 1.1rem;
